@@ -15,7 +15,6 @@ public class BankAccountTest {
 		saving.withdraw(100.50, "Saving");
 		System.out.println("Checking balance: " + checking.getCheckingBalance());
 		System.out.println("Saving balance: " + saving.getSavingsBalance());
-		
 	}
 
 }

@@ -3,7 +3,7 @@ package me.williamtsai.bankaccount.bankaccount;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class BankAccount {
-	private static int numberOfAccounts;
+	private static int numberOfAccounts = 0;
 	private static double totalAmount;
 	
 	private String accountNumber;
@@ -12,7 +12,7 @@ public class BankAccount {
 	
 	public BankAccount() {
 		this.accountNumber = Long.toString(this.generateTenDigits());
-		BankAccount.numberOfAccounts++;
+		BankAccount.numberOfAccounts += 1;
 		System.out.println("New account number: " + this.accountNumber);
 	}
 	
@@ -84,5 +84,8 @@ public class BankAccount {
 		this.accountNumber = accountNumber;
 	}
 	
+	public int getNumberOfAccounts() {
+		return numberOfAccounts;
+	}
 	
 }
